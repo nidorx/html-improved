@@ -4,8 +4,8 @@ Html template engine, inspired by [jade](https://github.com/jadejs/jade)
 
 Adds improvements to html templates
 
-#Sample
-[html-improved-sample](https://github.com/jadejs/jade)
+##Sample
+[html-improved-sample](https://github.com/nidorx/html-improved-sample)
 
 
 # Reference
