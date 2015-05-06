@@ -2,10 +2,7 @@
 Adds improvements to html templates
 
 
-npm install -g mocha
-
-
-# Engine reference
+# Reference
 
 ## Includes
 
@@ -31,9 +28,7 @@ Including files that are not HTML (.html, .html, .xhtml, .xml) just includes the
 ```html
 <html>
     <head>
-        <style>
-            <include file="./style.css" />
-        </style>
+        <include file="./style.css" />
     </head>
     <body>
         ...
