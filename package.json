@@ -1,5 +1,5 @@
 {
-    "name": "grunt-html-improved",
+    "name": "html-improved",
     "version": "0.0.1",
     "description": "Adds improvements to html templates",
     "homepage": "https://github.com/nidorx/grunt-html-improved",
@@ -43,11 +43,5 @@
         "template",
         "extends",
         "include"
-    ],
-    "maintainers": [
-        {
-            "name": "nidorx",
-            "email": "contato@alexrodin.info"
-        }
     ]
 }
