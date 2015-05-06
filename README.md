@@ -1,8 +1,11 @@
 # html-improved
 
-Html template engine, inspired by [jade](https://github.com/jadejs/jade).
+Html template engine, inspired by [jade](https://github.com/jadejs/jade)
 
 Adds improvements to html templates
+
+#Sample
+[html-improved-sample](https://github.com/jadejs/jade)
 
 
 # Reference
