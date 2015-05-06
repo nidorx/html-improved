@@ -1,0 +1,54 @@
+{
+    "name": "grunt-html-improved",
+    "version": "0.0.1",
+    "description": "Adds improvements to html templates",
+    "private": true,
+    "homepage": "https://github.com/nidorx/grunt-html-improved",
+    "author": {
+        "name": "Alex Rodin",
+        "email": "contato@alexrodin.info",
+        "url": "http://www.alexrodin.info/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/nidorx/grunt-html-improved.git"
+    },
+    "bugs": {
+        "url": "https://github.com/nidorx/grunt-html-improved/issues"
+    },
+    "licenses": [
+        {
+            "type": "GPL2",
+            "url": "https://github.com/nidorx/grunt-html-improved/blob/master/LICENSE"
+        }
+    ],
+    "dependencies": {
+        "lodash": "3.5.x",
+        "js-beautify": "1.5.x",
+        "escape-html": "1.0.x"
+    },
+    "devDependencies": {
+        "mocha": "2.2.x",
+        "jscoverage": "0.5.x"
+    },
+    "engines": {
+        "node": ">=0.10.0"
+    },
+    "main": "lib/index.js",
+    "scripts": {
+        "test": "node ./exec-tests.js"
+    },
+    "keywords": [
+        "jade",
+        "hmtl",
+        "template",
+        "extends",
+        "include"
+    ],
+    "maintainers": [
+        {
+            "name": "nidorx",
+            "email": "contato@alexrodin.info"
+        }
+    ]
+}

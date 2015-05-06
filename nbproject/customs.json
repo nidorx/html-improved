@@ -1,0 +1,20 @@
+{
+    "attributes": {},
+    "elements": {
+        "extends": {
+            "attributes": {
+                "file": {}
+            }
+        },
+        "block": {
+            "attributes": {
+                "name": {}
+            }
+        },
+        "include": {
+            "attributes": {
+                "file": {}
+            }
+        }
+    }
+}

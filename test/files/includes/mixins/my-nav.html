@@ -1,0 +1,16 @@
+<mixin name="my-nav" params="paramOne, paramTwo">
+    <include file="./li.html" />
+    <ul>
+        <nav-item>
+            Home -  #{appName}
+        </nav-item>
+        <nav-item>
+            #1 - #{paramOne}
+        </nav-item>
+        <nav-item>
+            #2 - #{paramTwo}
+        </nav-item>
+    </ul>
+
+    !{$content}
+</mixin>
