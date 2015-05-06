@@ -1,6 +1,7 @@
 {
     "attributes": {},
     "elements": {
+        "vars": {},
         "extends": {
             "attributes": {
                 "file": {}
