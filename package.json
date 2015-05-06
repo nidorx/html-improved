@@ -2,7 +2,6 @@
     "name": "grunt-html-improved",
     "version": "0.0.1",
     "description": "Adds improvements to html templates",
-    "private": true,
     "homepage": "https://github.com/nidorx/grunt-html-improved",
     "author": {
         "name": "Alex Rodin",
