@@ -1,4 +1,4 @@
-# html-improved
+# html-improved [![Build Status](https://travis-ci.org/nidorx/html-improved.svg?branch=master)](https://travis-ci.org/nidorx/html-improved) [![npm package](https://badge.fury.io/js/html-improved.svg)](https://www.npmjs.com/package/html-improved)
 
 Html template engine, inspired by [jade](https://github.com/jadejs/jade)
 
