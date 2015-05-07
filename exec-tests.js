@@ -1,11 +1,14 @@
 #!/usr/bin/env node
 
 var exec = require('child_process').exec;
+var rmrf = require('rmrf');
 
 (function (commands) {
     var next = function () {
         var command = commands.shift();
         if (!command) {
+            // remove o diretório de coverage
+            rmrf(__dirname + '/lib-cov');
             return;
         }
         exec(command, function (err, stdout, stderr) {
@@ -21,7 +24,6 @@ var exec = require('child_process').exec;
     next();
 })([
     'node \"./node_modules/jscoverage/bin/jscoverage\" lib lib-cov',
-//    'node \"./node_modules/mocha/bin/_mocha\" -t 60000 -r jscoverage -R spec --covout=html test/'
     // test unitário
     'node \"./node_modules/mocha/bin/_mocha\" -R spec',
     // cobertura de teste unitario

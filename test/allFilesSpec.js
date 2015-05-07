@@ -13,10 +13,14 @@ var TESTE_FILES_DIR = __dirname + '/files/';
 var EXPECTED_FILES_DIR = TESTE_FILES_DIR + '/expected/';
 
 var TEST_LIST = {
-    'HtmlImproved': {
+    'Funcionalidades': {
         'Deve permitir extends simples': 'extends-simple.html',
         'Deve permitir extends complexo (com mixins e etc)': 'extends-full.html',
         'Deve permitir include de arquivos raw': 'include-raw.html',
+        'Deve permitir o uso de condicionais': 'conditional.html',
+        'Deve permitir o uso de variáveis complexas': 'variables.html',
+        'Deve permitir a definição de variáveis dentro do mixin': 'mixin-variables.html',
+        'Deve permitir o uso de condicionais dentro do mixin': 'mixin-conditional.html',
     },
     'Exceptions': {
         'Não deve permitir herança cíclica': [

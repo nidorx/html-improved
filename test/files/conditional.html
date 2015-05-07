@@ -1,0 +1,20 @@
+<extends file="./includes/layout.html" />
+<vars
+    otherVar="otherVar value"
+    page-title="pageTitle value"
+    objectVar="{showBody:true, hideContent:true}"
+    />
+
+
+<if cond="objectVar.showBody">
+    <block name="body">
+        <p>block body</p>
+    </block>
+</if>
+
+<if cond="!objectVar.hideContent">
+    <block name="content-inner">
+        <p>block content-inner</p>
+    </block>
+</if>
+

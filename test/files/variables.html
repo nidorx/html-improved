@@ -1,0 +1,42 @@
+
+
+<vars
+    simple-var="simple value"
+    objectVar="{name:'name value'}"
+    arrayVar="['one','two','tree']"
+    expressionVar="(new Date(1431009118430).toISOString())"
+    numberVar="25"
+    booleanVar="true"
+    />
+
+<ul>
+    <li>
+        !{simpleVar}
+    </li>
+    <li>
+        !{objectVar.name}
+    </li>
+    <li>
+        !{arrayVar[1]}
+    </li>
+    <li>
+        !{expressionVar}
+    </li>
+    <li>
+        !{numberVar}
+    </li>
+    <li>
+        !{booleanVar}
+    </li>
+    <li>
+        !{conditionalVarSim}
+    </li>
+    <li>
+        !{conditionalVarNao}
+    </li>
+</ul>
+
+<vars
+    conditionalVarSim="((numberVar > 20)? 'sim' : 'não')"
+    conditionalVarNao="((numberVar < 20)? 'sim' : 'não')"
+    />

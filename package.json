@@ -1,47 +1,47 @@
 {
-  "name": "html-improved",
-  "version": "0.0.7",
-  "description": "Adds improvements to html templates",
-  "homepage": "https://github.com/nidorx/html-improved",
-  "author": {
-    "name": "Alex Rodin",
-    "email": "contato@alexrodin.info",
-    "url": "http://www.alexrodin.info/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/nidorx/html-improved.git"
-  },
-  "bugs": {
-    "url": "https://github.com/nidorx/html-improved/issues"
-  },
-  "licenses": [
-    {
-      "type": "GPL2",
-      "url": "https://github.com/nidorx/html-improved/blob/master/LICENSE"
-    }
-  ],
-  "dependencies": {
-    "lodash": "3.5.x",
-    "js-beautify": "1.5.x",
-    "escape-html": "1.0.x"
-  },
-  "devDependencies": {
-    "mocha": "2.2.x",
-    "jscoverage": "0.5.x"
-  },
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "main": "lib/index.js",
-  "scripts": {
-    "test": "node ./exec-tests.js"
-  },
-  "keywords": [
-    "jade",
-    "hmtl",
-    "template",
-    "extends",
-    "include"
-  ]
+    "name": "html-improved",
+    "version": "0.0.7",
+    "description": "Adds improvements to html templates",
+    "homepage": "https://github.com/nidorx/html-improved",
+    "author": {
+        "name": "Alex Rodin",
+        "email": "contato@alexrodin.info",
+        "url": "http://www.alexrodin.info/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/nidorx/html-improved.git"
+    },
+    "bugs": {
+        "url": "https://github.com/nidorx/html-improved/issues"
+    },
+    "licenses": [
+        {
+            "type": "GPL2",
+            "url": "https://github.com/nidorx/html-improved/blob/master/LICENSE"
+        }
+    ],
+    "dependencies": {
+        "lodash": "3.5.x",
+        "escape-html": "1.0.x"
+    },
+    "devDependencies": {
+        "mocha": "2.2.x",
+        "jscoverage": "0.5.x",
+        "rmrf": "1.0.x"
+    },
+    "engines": {
+        "node": ">=0.10.0"
+    },
+    "main": "lib/index.js",
+    "scripts": {
+        "test": "node ./exec-tests.js"
+    },
+    "keywords": [
+        "jade",
+        "hmtl",
+        "template",
+        "extends",
+        "include"
+    ]
 }

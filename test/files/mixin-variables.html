@@ -1,0 +1,16 @@
+<mixin name="mixin-test">
+    <vars
+        varOne="value in mixin"
+        />
+
+    <p>#{varOne}</p>
+</mixin>
+
+<p>#{varOne}</p>
+
+<vars
+    varOne="value out of mixin"
+    />
+
+<mixin-test />
+

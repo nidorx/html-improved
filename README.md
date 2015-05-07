@@ -185,6 +185,39 @@ note that **pageAuthor** and **page-author** forms define the same variable (pag
 
 Whenever you define a variable, all previous definitions of this variable will be overwritten.
 
+
+### Conditional
+
+**Html Improved** has syntax for conditional rendering of html blocks through tag `<if />`.
+
+```html
+<vars
+    description="foo bar baz"
+    authorised="false"
+/>
+
+<div id="user">
+    <if cond="description">
+        <h2>Description</h2>
+        <p class="description">#{description}</p>
+    </if>
+    <if cond="!description">
+        <h2>Description</h2>
+        <p class="description">Has no description</p>
+    </if>
+    <if cond="authorised">
+        <p>No content provided</p>
+    </if>
+</div>
+
+<!-- will output -->
+<div id="user">
+    <h2>Description</h2>
+    <p class="description">foo bar baz</p>
+</div>
+```
+
+
 ### String Escaped
 
 To escape safely strings, just use the operator `#{` and `}`.
@@ -289,13 +322,18 @@ Mixins can also take a block of HTML to act as the content:
         <div class="article-wrapper">
             <h1>#{title}</h1>
             <span>#{authorName}</span>
-            !{$content}
+            <if cond="$content">
+                !{$content}
+            </if>
+            <if cond="!$content">
+                <p>No content!</p>
+            </if>
         </div>
     </div>
 </mixin>
 
 <!-- Use -->
-<article title="Hello world" author-name="John Doe"/>
+<article title="Hello world" author-name="John Doe" />
 <article title="Hello world" author-name="John Doe">
     <p>This is my</p>
     <p>Amazing article</p>
@@ -307,6 +345,7 @@ Mixins can also take a block of HTML to act as the content:
     <div class="article-wrapper">
         <h1>Hello world</h1>
         <span>John Doe</span>
+        <p>No content!</p>
     </div>
 </div>
 <div class="article">
@@ -340,50 +379,4 @@ Mixins also get an implicit attributes argument taken from the attributes passed
 
 <!-- Will output -->
 <a href="/my/base/path/foo.html" class="btn">bar</a>
-```
-
-
-# TODO
-
-## Conditionals (not yet implemented)
-
-**Html Improved** has syntax for conditional rendering of html blocks through tags `<if />`, `<else />` and `<unless />`.
-
-```html
-<vars
-    description="foo bar baz"
-    authorised="false"
-/>
-
-<div id="user">
-    <if cond="description">
-        <h2>Description</h2>
-        <p class="description">#{description}</p>
-    </if>
-    <else cond="authorised">
-        <p>No content provided</p>
-    </else>
-    <else>
-        <h2>Description</h2>
-        <p class="description">Has no description</p>
-    </else>
-</div>
-
-<!-- will output -->
-<div id="user">
-    <h2>Description</h2>
-    <p class="description">foo bar baz</p>
-</div>
-```
-
-**Html Improved** also provides a negated version unless (the following are therefore equivalent):
-
-```html
-<unless cond="authorised">
-    do ...
-</unless>
-
-<if cond="!authorised">
-    do ...
-</if>
 ```

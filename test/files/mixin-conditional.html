@@ -1,0 +1,20 @@
+<mixin name="article" params="title, authorName">
+    <div class="article">
+        <div class="article-wrapper">
+            <h1>#{title}</h1>
+            <span>#{authorName}</span>
+            <if cond="$content">
+                !{$content}
+            </if>
+            <if cond="!$content">
+                <p>No content!</p>
+            </if>
+        </div>
+    </div>
+</mixin>
+
+<article title="Hello world" author-name="John Doe" />
+<article title="Hello world" author-name="John Doe">
+    <p>This is my</p>
+    <p>Amazing article</p>
+</article>
