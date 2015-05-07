@@ -4,7 +4,7 @@ Html template engine, inspired by [jade](https://github.com/jadejs/jade)
 
 Adds improvements to html templates
 
-##Sample
+## Sample Project
 [html-improved-sample](https://github.com/nidorx/html-improved-sample)
 
 
@@ -27,7 +27,7 @@ Includes allow you to insert the contents of one HTML file into another.
 ```
 
 
-###Including Plain Text
+### Including Plain Text
 
 Including files that are not HTML (.html, .html, .xhtml, .xml) just includes the raw text.
 
@@ -42,7 +42,7 @@ Including files that are not HTML (.html, .html, .xhtml, .xml) just includes the
 </html>
 ```
 
-##Template inheritance
+## Template inheritance
 
 **Html Improved** supports template inheritance via the `<block/>` and `<extends/>` keywords.
 
@@ -257,9 +257,6 @@ will output
   <p>Joel: <em>Some of the girls are wearing my mother's clothing.</em></p>
 </div>
 ```
-
-
-
 
 
 ## Mixins
