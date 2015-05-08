@@ -259,6 +259,87 @@ will output
 ```
 
 
+### Iteration
+
+**Html Improved** supports one primary method of iteration, `<each />`.
+
+**Html Improved** iteration syntax makes it easier to iterate over arrays and objects within a template:
+
+```html
+<vars
+    objectVar="{attr1:'One', attr2:'Two'}"
+    arrayVar="[{name:'Alex'}, {name:'Jhon'}, {name:'Gabriel'}, {name:'Darwin'}]"
+    innerVar="[[1,2,3],[4,5,6],[7,8,9,10],[11]]"
+    />
+
+<ul>
+    <each in="[5,4,3,2,1,0]">
+        <li>
+            #{$key} - #{$value}
+        </li>
+    </each>
+</ul>
+
+<ul>
+    <each in="objectVar">
+        <li>
+            #{$key} - #{$value}
+        </li>
+    </each>
+</ul>
+
+<ul>
+    <each var="value" in="objectVar">
+        <li>
+            #{$key} - #{value}
+        </li>
+    </each>
+</ul>
+
+<ul>
+    <each var="key, value" in="objectVar">
+        <li>
+            #{key} - #{value}
+        </li>
+    </each>
+</ul>
+
+
+<ul>
+    <each in="arrayVar">
+        <li>
+            #{$key} - #{$value.name}
+        </li>
+    </each>
+</ul>
+
+<ul>
+    <each var="value" in="arrayVar">
+        <li>
+            #{$key} - #{value.name}
+        </li>
+    </each>
+</ul>
+
+<ul>
+    <each var="key, value" in="arrayVar">
+        <li>
+            #{key} - #{value.name}
+        </li>
+    </each>
+</ul>
+
+
+<each var="key, value" in="innerVar">
+    <each var="subKey, subValue" in="value">
+        <p>
+            #{key} - #{subKey} - #{subValue}
+        </p>
+    </each>
+</each>
+```
+
+
 ## Mixins
 
 Mixins allow you to create reusable blocks of HTML.
