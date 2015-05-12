@@ -61,11 +61,25 @@
     </each>
 </ul>
 
-
-<each var="key, value" in="innerVar">
-    <each var="subKey, subValue" in="value">
-        <p>
-            #{key} - #{subKey} - #{subValue}
-        </p>
+<div>
+    <each var="key, value" in="innerVar">
+        <each var="subKey, subValue" in="value">
+            <p>
+                #{key} - #{subKey} - #{subValue}
+            </p>
+        </each>
     </each>
-</each>
+</div>
+<div>
+    <each var="key, value" in="innerVar">
+        <each var="subKey, subValue" in="value">
+            <if cond="key > 1">
+                <if cond="subKey < 2 || subValue === 9">
+                    <p>
+                        #{key} - #{subKey} - #{subValue}
+                    </p>
+                </if>
+            </if>
+        </each>
+    </each>
+</div>
