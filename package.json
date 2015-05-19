@@ -23,7 +23,6 @@
   ],
   "dependencies": {
     "lodash": "3.5.x",
-    "jsonfn": "0.31.0",
     "escape-html": "1.0.x"
   },
   "devDependencies": {
