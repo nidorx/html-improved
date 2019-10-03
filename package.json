@@ -22,7 +22,7 @@
     }
   ],
   "dependencies": {
-    "lodash": "3.5.x",
+    "lodash": "4.17.x",
     "escape-html": "1.0.x"
   },
   "devDependencies": {
