@@ -1,4 +1,6 @@
-/nbproject/private/
+.idea
+.nyc_output
 /node_modules/
 /lib-cov/
+/coverage
 /npm-debug.log

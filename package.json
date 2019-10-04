@@ -1,6 +1,6 @@
 {
   "name": "html-improved",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Adds improvements to html templates",
   "homepage": "https://github.com/nidorx/html-improved",
   "author": {
@@ -22,21 +22,22 @@
     }
   ],
   "dependencies": {
-    "lodash": "3.5.x",
-    "escape-html": "1.0.x"
+    "lodash": "4.17.15",
+    "escape-html": "1.0.3"
   },
   "devDependencies": {
-    "mocha": "2.2.x",
-    "jscoverage": "0.5.x",
-    "rmrf": "1.0.x"
-  },
-  "engines": {
-    "node": ">=0.10.0"
+    "mocha": "6.2.1",
+    "nyc": "14.1.1"
   },
   "main": "lib/index.js",
   "scripts": {
-    "test": "node ./exec-tests.js"
+    "test": "nyc --reporter=lcov --reporter=text-summary mocha"
   },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "lib"
+  ],
   "keywords": [
     "jade",
     "hmtl",
