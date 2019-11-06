@@ -1,9 +1,13 @@
-<extends file="./includes/layout.html" />
-<vars
-    otherVar="otherVar value"
-    page-title="'pageTitle value'"
-    objectVar="{showBody:true, hideContent:true}"
+<extends file="./includes/layout.html"/>
+
+
+<block name="head">
+    <vars
+            otherVar="otherVar value"
+            page-title="pageTitle value"
+            objectVar="{showBody:true, hideContent:true}"
     />
+</block>
 
 
 <if cond="objectVar.showBody">
@@ -12,9 +16,9 @@
     </block>
 </if>
 
-<if cond="!objectVar.hideContent">
-    <block name="content-inner">
+<block name="content-inner">
+    <if cond="!objectVar.hideContent">
         <p>block content-inner</p>
-    </block>
-</if>
+    </if>
+</block>
 

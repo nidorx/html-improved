@@ -1,11 +1,15 @@
-<extends file="./layout.html" />
-<vars
-    appName="Application name"
-    otherVar="value on 'page.html'"
+<extends file="./layout.html"/>
+
+<block name="head" append>
+    <vars
+            appName="Application name"
+            otherVar="value on 'page.html'"
     />
-<block name="body" >
+</block>
+
+<block name="body">
     <div>
-        <include file="./mixins/my-nav.html" />
+        <include file="./mixins/my-nav.html"/>
         <my-nav paramOne="value one" paramTwo="value two">
             <div>
                 navigation content
@@ -14,9 +18,9 @@
     </div>
 
     <div>
-        <block name="content" />
+        <block name="content"/>
     </div>
     <div>
-        <block name="footer" />
+        <block name="footer"/>
     </div>
 </block>

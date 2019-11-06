@@ -1,18 +1,19 @@
 <mixin name="mixin-test">
     <vars
-        varOne="value in mixin"
-        >
+            varOne="value in mixin"
+    >
     </vars>
 
     <p>#{varOne}</p>
 </mixin>
 
+<vars
+        varOne="value out of mixin"
+>
+</vars>
+
 <p>#{varOne}</p>
 
-<vars
-    varOne="value out of mixin"
-    >
-</vars>
 
 <mixin-test></mixin-test>
 

@@ -1,23 +1,26 @@
-<extends file="./includes/page.html" ></extends>
+<extends file="./includes/page.html"></extends>
 
-<vars
-    page-title="Html Improved Sample"
-    other-var="value on 'index.html'"
+<block name="head" append>
+    <vars
+            page-title="Html Improved Sample"
+            other-var="value on 'index.html'"
     ></vars>
+</block>
+
 
 <block name="content">
-    <div> page content </div>
+    <div> page content</div>
 </block>
 
 <block name="footer">
-    <div> footer content </div>
+    <div> footer content</div>
 </block>
 
 <block name="footer" append>
-    <div> after footer </div>
+    <div> after footer</div>
 </block>
 
 <block name="footer" prepend>
-    <div> before footer </div>
+    <div> before footer</div>
 </block>
 

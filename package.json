@@ -1,6 +1,6 @@
 {
   "name": "html-improved",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Adds improvements to html templates",
   "homepage": "https://github.com/nidorx/html-improved",
   "author": {
@@ -21,10 +21,7 @@
       "url": "https://github.com/nidorx/html-improved/blob/master/LICENSE"
     }
   ],
-  "dependencies": {
-    "lodash": "4.17.15",
-    "escape-html": "1.0.3"
-  },
+  "dependencies": {},
   "devDependencies": {
     "mocha": "6.2.1",
     "nyc": "14.1.1"

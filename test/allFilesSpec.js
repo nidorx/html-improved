@@ -1,13 +1,10 @@
-
 /* global __dirname */
 
 
 var fs = require('fs');
 var path = require('path');
 var assert = require("assert");
-var htmlImproved = (fs.existsSync(path.join(__dirname, './../lib-cov')))
-        ? require('./../lib-cov/index')
-        : require('./../lib/index');
+var htmlImproved = require('./../lib/index');
 
 var TESTE_FILES_DIR = __dirname + '/files/';
 var EXPECTED_FILES_DIR = TESTE_FILES_DIR + '/expected/';
@@ -35,11 +32,7 @@ var TEST_LIST = {
         'Não deve permitir include cíclico': [
             'include-cyclic.html',
             'Cyclic/recursive include identified'
-        ],
-        'Os parametros de um mixin devem ser válidos': [
-            'invalid-mixin-parameter.html',
-            'Mixin created with invalid parameter'
-        ],
+        ]
     }
 };
 
@@ -69,7 +62,7 @@ for (var groupName in TEST_LIST) {
                             htmlImproved(path.join(TESTE_FILES_DIR, filePath));
                         }, function (err) {
                             var regx = (RegExp('^' + (erroMessage.replace(/([/])/g, '\\$1'))));
-                            //console.log('regx', regx, err.message)
+                            // console.log('regx', regx, err.message)
                             if ((err instanceof Error) && regx.test(err.message)) {
                                 return true;
                             }
