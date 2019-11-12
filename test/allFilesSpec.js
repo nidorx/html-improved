@@ -18,6 +18,7 @@ var TEST_LIST = {
         'Deve permitir o uso de variáveis complexas': 'variables.html',
         'Deve permitir a definição de variáveis dentro do mixin': 'mixin-variables.html',
         'Deve permitir o uso de condicionais dentro do mixin': 'mixin-conditional.html',
+        'Deve permitir parametros complexos nos mixins': 'mixin-params.html',
         'Deve permitir loop (each)': 'loop.html',
     },
     'Exceptions': {

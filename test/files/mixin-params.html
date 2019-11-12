@@ -1,0 +1,28 @@
+<mixin name="article" params="title, authorName, class-name, complexObject">
+    <div class="article !{className}">
+        <div class="article-wrapper">
+            <h1>#{title}</h1>
+            <span>#{authorName}</span>
+            <span>!{complexObject.id}</span>
+            <span>!{complexObject.contents[0].name}</span>
+            <span>!{complexObject.contents[1].name}</span>
+        </div>
+    </div>
+</mixin>
+
+<article
+        title="Hello world"
+        author-name="John Doe"
+        class-name="figure-3d"
+        complex-object="{
+            'id':'features',
+            'contents': [
+                {
+                    'name':'John'
+                },
+                {
+                    'name':'Alex'
+                }
+            ]
+        }"
+/>
