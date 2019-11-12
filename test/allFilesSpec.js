@@ -23,15 +23,19 @@ var TEST_LIST = {
     'Exceptions': {
         'Não deve permitir herança cíclica': [
             'inheritance-cyclic.html',
-            'Cyclic/recursive inheritance identified'
+            /Cyclic\/recursive inheritance identified/
         ],
         'Não deve permitir herança múltipla': [
             'inheritance-multiple.html',
-            'Identified multiple inheritance'
+            /Identified multiple inheritance/
         ],
         'Não deve permitir include cíclico': [
             'include-cyclic.html',
-            'Cyclic/recursive include identified'
+            /Cyclic\/recursive include identified/
+        ],
+        'Deve exibir erro quando expressão está errada': [
+            'expression-error.html',
+            /.*Error in expression "key" \(key is not defined\) at .*4:13/
         ]
     }
 };
@@ -47,33 +51,27 @@ var doTestFile = function (info, callback) {
 
 for (var groupName in TEST_LIST) {
     describe(groupName, function () {
-        for (var testDescription in TEST_LIST[groupName]) {
+        for (var title in TEST_LIST[groupName]) {
             (function (testInfo) {
-                var filePath = testInfo;
-                var erroMessage;
+                var file = testInfo;
+                var errorPattern;
                 if (Array.isArray(testInfo)) {
-                    filePath = testInfo[0];
-                    erroMessage = testInfo[1];
+                    file = testInfo[0];
+                    errorPattern = testInfo[1];
                 }
 
-                it(testDescription, function () {
-                    if (erroMessage) {
+                it(title, function () {
+                    if (errorPattern) {
                         assert.throws(function () {
-                            htmlImproved(path.join(TESTE_FILES_DIR, filePath));
-                        }, function (err) {
-                            var regx = (RegExp('^' + (erroMessage.replace(/([/])/g, '\\$1'))));
-                            // console.log('regx', regx, err.message)
-                            if ((err instanceof Error) && regx.test(err.message)) {
-                                return true;
-                            }
-                        });
+                            htmlImproved(path.join(TESTE_FILES_DIR, file));
+                        }, errorPattern);
                     } else {
-                        var data = (fs.readFileSync(path.join(EXPECTED_FILES_DIR, filePath)) + '');
-                        var html = htmlImproved(path.join(TESTE_FILES_DIR, filePath));
+                        var data = (fs.readFileSync(path.join(EXPECTED_FILES_DIR, file)) + '');
+                        var html = htmlImproved(path.join(TESTE_FILES_DIR, file));
                         assert.equal(cleanHtml(html), cleanHtml(data + ''));
                     }
                 });
-            })(TEST_LIST[groupName][testDescription]);
+            })(TEST_LIST[groupName][title]);
         }
     });
 }
